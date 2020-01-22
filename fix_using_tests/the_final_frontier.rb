@@ -18,5 +18,7 @@ end
 def engage
   date = generate_star_date
   state_log(date)
-  greet_crew(crew)
+  array = []
+  greet_crew(crew).each {|e| array << "Hello " + e +"."}
+  array
 end
